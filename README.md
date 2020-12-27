@@ -1,1 +1,1 @@
-# ts-testbed
+# Typescript testbed with Node.js
