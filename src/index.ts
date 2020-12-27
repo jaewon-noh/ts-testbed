@@ -1,9 +1,9 @@
-import { App } from '@tinyhttp/app'
+import { App } from '@tinyhttp/app';
+import type { Request, Response } from '@tinyhttp/app';
+import { app as router } from './routes';
 
-const app = new App()
+const app = new App<any, Request, Response>();
 
-app
-	.get('/', function handler(_, res) {
-		res.send('<h1>Hello World</h1>')
-	})
-	.listen(3000, () => console.log('Started on http://localhost:3000'))
+app.use(router);
+
+app.listen(3000, () => console.log('Started on http://localhost:3000'));
