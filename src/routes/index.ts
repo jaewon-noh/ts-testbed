@@ -6,6 +6,7 @@ import { app as literalRouter } from "./literal";
 import { app as unionAndIntersectionRouter } from "./union-and-intersection";
 import { app as classesRouter } from "./classes";
 import { app as enumsRouter } from "./enums";
+import { app as genericRouter } from "./generic";
 
 export const app = new App();
 
@@ -16,4 +17,5 @@ app
 	.use('/literal', literalRouter)
 	.use('/union', unionAndIntersectionRouter)
 	.use('/classes', classesRouter)
-	.use('/enums', enumsRouter);
+	.use('/enums', enumsRouter)
+	.use('/generic', genericRouter);
