@@ -7,6 +7,7 @@ import { app as unionAndIntersectionRouter } from "./union-and-intersection";
 import { app as classesRouter } from "./classes";
 import { app as enumsRouter } from "./enums";
 import { app as genericRouter } from "./generic";
+import { app as advancedTypeRouter } from "./advanced-type";
 
 export const app = new App();
 
@@ -18,4 +19,5 @@ app
 	.use('/union', unionAndIntersectionRouter)
 	.use('/classes', classesRouter)
 	.use('/enums', enumsRouter)
-	.use('/generic', genericRouter);
+	.use('/generic', genericRouter)
+	.use('/advanced', advancedTypeRouter);
