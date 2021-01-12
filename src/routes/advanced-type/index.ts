@@ -285,21 +285,21 @@ app
 
 		type T4 = TypeName<string[]>;
 
-		function isFoo(x: any): x is Foo {
-			if (typeof x === 'object') {
-				return x.propA;
-			} else {
-				return false;
-			}
-		}
+		// function isFoo(x: any): x is Foo {
+		// 	if (typeof x === 'object') {
+		// 		return x.propA;
+		// 	} else {
+		// 		return false;
+		// 	}
+		// }
 
-		function f<T>(x: T) {
-			if (isFoo(x)) {
-				return 'foo 라는';
-			} else {
-				return 1;
-			}
-		}
+		// function f<T>(x: T) {
+		// 	if (isFoo(x)) {
+		// 		return 'foo 라는';
+		// 	} else {
+		// 		return 1;
+		// 	}
+		// }
 
 		// function foo<U>(x: U) {
 		// 	// Has type 'U extends Foo ? string : number'
