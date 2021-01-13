@@ -100,14 +100,14 @@ app
 				}
 			}
 		}
-		// parameter decorator는 대부분 method decorator와 함께 사용하는 듯.
+		// parameter decorator 대부분 method decorator와 함께 사용하는 듯.
 		function validate(target: any, name: string, descriptor: PropertyDescriptor) {
 			const originMethod = target[name];
 			descriptor.value = function(...args: any[]) {
 				if (!target.validators(args)) {
 					throw new Error("Invalid");
 				}
-				originMethod.apply(this, args);
+				return originMethod.apply(this, args);
 			}
 		}
 
