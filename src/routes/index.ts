@@ -9,6 +9,7 @@ import { app as enumsRouter } from "./enums";
 import { app as genericRouter } from "./generic";
 import { app as advancedTypeRouter } from "./advanced-type";
 import { app as decoratorRouter } from "./decorator";
+import { app as namespaceRouter } from "./namespace";
 
 export const app = new App();
 
@@ -22,4 +23,5 @@ app
 	.use('/enums', enumsRouter)
 	.use('/generic', genericRouter)
 	.use('/advanced', advancedTypeRouter)
-	.use('/decorator', decoratorRouter);
+	.use('/decorator', decoratorRouter)
+	.use('/namespace', namespaceRouter);
