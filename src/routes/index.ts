@@ -10,6 +10,7 @@ import { app as genericRouter } from "./generic";
 import { app as advancedTypeRouter } from "./advanced-type";
 import { app as decoratorRouter } from "./decorator";
 import { app as namespaceRouter } from "./namespace";
+import { app as declarationMergingRouter } from "./declaration-merging";
 
 export const app = new App();
 
@@ -24,4 +25,5 @@ app
 	.use('/generic', genericRouter)
 	.use('/advanced', advancedTypeRouter)
 	.use('/decorator', decoratorRouter)
-	.use('/namespace', namespaceRouter);
+	.use('/namespace', namespaceRouter)
+	.use('/declarationMerging', declarationMergingRouter);
